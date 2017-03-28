@@ -1,0 +1,61 @@
+.home_page {
+  height: 82vh;
+  width: 100%;
+  padding: 0px;
+  background: url('./assets/banner.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
+.banner_title {
+  font-weight: 600;
+  font-size: 3.5em;
+  color: white;
+}
+
+.home_title{
+  padding: 8% 5% 0 5%;
+}
+
+.home_tag{
+  font-weight: 500;
+  font-size: 1.8em;
+  color: white;
+}
+
+.transparent-background{
+  height: 100%;
+  width: 100%;
+  background: rgba(51,51,51,0.7);
+}
+
+.current-user {
+    color: white;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+
+    .imprint:hover {
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

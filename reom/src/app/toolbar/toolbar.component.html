@@ -1,0 +1,28 @@
+<div class="navbar-fixed">
+  <nav  role="navigation">
+    <div class="nav-wrapper grey ">
+        <a *ngIf="!(authService.userSignedIn$ | async)" [routerLink]="['']" id="logo-container" class="brand-logo">Home</a>
+        <a *ngIf="(authService.userSignedIn$ | async)" routerLink="/dashboard" routerLinkActive="active" class="brand-logo">Dashboard</a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="!(authService.userSignedIn$ | async)"> 
+          <a (click)="presentAuthDialog()" >LOGIN</a>
+        </li>
+        <li *ngIf="!(authService.userSignedIn$ | async)"> 
+          <a (click)="presentAuthDialog('register')">REGISTER</a>
+        </li>
+
+        <li *ngIf="(authService.userSignedIn$ | async)">
+          <a routerLink="/profile" routerLinkActive="active">PROFILE</a>
+        </li>
+        <li *ngIf="(authService.userSignedIn$ | async)">
+          <a (click)="logOut()">LOGOUT</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+  
+</div>
+<app-auth-dialog #authDialog></app-auth-dialog>

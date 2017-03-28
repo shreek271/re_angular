@@ -1,0 +1,4 @@
+<div>
+    <app-project-form [project]="project" [projects]= "projects" (projectsEdited)="editProjects($event)"></app-project-form>
+</div>
+<app-project-list [projects]="projects" (projectsUpdated)="updateProjects($event)" ></app-project-list>

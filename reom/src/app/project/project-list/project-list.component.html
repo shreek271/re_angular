@@ -1,0 +1,25 @@
+<div>
+	<div class="input-field col s3">
+		<ul class="collapsible popout" data-collapsible="accordion">
+			<li *ngFor="let project of projects" >
+			  <div class="collapsible-header">
+			    <div>{{project.name}}
+			      <span class= "pull-right">
+			        <a (click)="deleteProject(project)" href="javascript:void(0)">
+          				<i class="material-icons">delete</i>
+                    </a>
+                  </span>
+			      <span class= "pull-right">
+			        <a (click)="edProject(project)" href="javascript:void(0)">
+          				<i class="material-icons">mode_edit</i>
+                    </a>
+                  </span>
+			    </div>
+              </div>
+			  <div class="collapsible-body"><span>{{project.description}}</span></div>
+			</li>
+		</ul>
+	</div>
+	<div col s9>		
+	</div>
+</div>

@@ -1,0 +1,6 @@
+<div class="row">
+	<span *ngIf="authTokenService.currentUserData">
+		<b>hi, {{authTokenService.currentUserData.email}}!</b>
+	</span>
+	<app-project></app-project>
+</div>

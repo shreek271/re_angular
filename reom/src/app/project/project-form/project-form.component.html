@@ -1,0 +1,35 @@
+<form (ngSubmit)="submitProject()">
+    <div class="input-field">
+      <input id="name" type="text" [(ngModel)]="project.name" name="name" class="validate">
+      <label for="name">Project Name</label>
+    </div>
+    <div class="input-field ">
+      <textarea id="description" type="text" [(ngModel)]="project.description" name="description" class="validate materialize-textarea"></textarea>
+      <label for="description">Description</label>
+    </div>
+    <div class="input-field">
+      <input id="estimate" type="number" [(ngModel)]="project.estimate" name="estimate" class="validate">
+      <label for="estimate">Estimate</label>
+    </div>
+     <!-- <div class="input-field">
+        <select>
+          <option value="" disabled selected>Select Status</option>
+          <option value="1">Define</option>
+          <option value="2">Develop</option>
+          <option value="3">Maintenance</option>
+        </select>
+        <label>Status</label>
+    </div> -->
+    <br>
+    <button type="save" class="btn btn-primary btn-block">Add</button>
+    <!-- <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Project Name" [(ngModel)]="project.name" name="author">
+        </div>
+        <br />
+        <textarea class="form-control" rows="3" placeholder="Description" [(ngModel)]="project.description" name="text"></textarea>
+        <br />
+        <button type="submit" class="btn btn-primary btn-block">Add</button>
+        <button *ngIf="editing" type="submit" class="btn btn-warning btn-block">Update</button>
+    </div> -->
+</form>
